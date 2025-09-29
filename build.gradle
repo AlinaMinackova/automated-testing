@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'com.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    // Selenide
+    testImplementation 'com.codeborne:selenide:6.19.1'
+
+    // Allure
+    testImplementation 'io.qameta.allure:allure-selenide:2.24.0'
+    testImplementation 'io.qameta.allure:allure-junit5:2.24.0'
+
+    // AspectJ (поддержка Java 17)
+    implementation 'org.aspectj:aspectjweaver:1.9.22'
+}
+
+test {
+    useJUnitPlatform()
+}
