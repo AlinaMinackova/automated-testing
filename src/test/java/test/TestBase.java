@@ -18,8 +18,8 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = "chrome";
-        Configuration.pageLoadTimeout = 60000;
-        Configuration.browserVersion = "100.0";
+//        Configuration.pageLoadTimeout = 60000;
+//        Configuration.browserVersion = "100.0";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
